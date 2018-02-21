@@ -1,0 +1,21 @@
+{
+  "name": "wl-frontend-challenge",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0",
+    "request-promise": "^4.2.2"
+  },
+  "scripts": {
+    "prestart": "npm prune --dev && npm install",
+    "start": "npm-run-all -p startserver startapp",
+    "startapp": "react-scripts start",
+    "startserver": "node server"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2"
+  }
+}
