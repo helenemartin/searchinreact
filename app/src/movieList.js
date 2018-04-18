@@ -24,13 +24,12 @@ export default class MovieList extends React.Component {
                 <Movie movie= {movie}/>
             
           </div>
-      )
-    })
+        );
+       })
       }
     </div> 
     </div>
-      
-    )
+    );
      
     }
 }
