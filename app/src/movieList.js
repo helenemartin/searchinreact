@@ -1,11 +1,11 @@
 import React from 'react';
 import './movieList.css';
-import Movie from "./movie.js"
+import Movie from "./movie.js";
 
 export default class MovieList extends React.Component {
     render(){
-     const showSortButton = this.props.movies.length > 0
-      console.log(this.props.sortBy)
+     const showSortButton = this.props.movies.length > 0;
+      console.log(this.props.sortBy);
     return(
       <div>
         {showSortButton &&

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-//import './App.css';
-import MovieList from './movieList.js'
-//import data from './data.json'
-import axios from 'axios'
+import './App.css';
+import MovieList from './movieList.js';
+//import data from './data.json';
+import axios from 'axios';
+import Header from './header.js';
 
 
 export default class App extends Component {
@@ -53,14 +54,9 @@ export default class App extends Component {
     
   }
   
-  termChanged = (event) => {
-    this.setState({
-      searchTerm: event.target.value
-    });
 
-  }
-  searchClicked = (event) => {
-    axios.get(`${window.location.protocol}//${window.location.hostname}:8081/movies?searchTerm=${this.state.searchTerm}`)
+  performSearch = (searchTerm) => {
+    axios.get(`${window.location.protocol}//${window.location.hostname}:8081/movies?searchTerm=${searchTerm}`)
       .then((response) => {
         this.setState({
           data: response.data.results.sort(this.sortByTitle)
@@ -73,8 +69,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <input type="text"  placeholder="search" value={this.state.searchTerm} onChange={this.termChanged}/>
-        <button onClick={this.searchClicked}>Search</button>
+        <Header performSearch={this.performSearch} />
+        
         <MovieList movies={this.state.data} onSortByReleaseYear={this.onSortByReleaseYear} onSortByTitle={this.onSortByTitle} sortBy={this.state.sortBy}/>
       </div>
     );

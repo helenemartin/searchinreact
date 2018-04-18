@@ -2,7 +2,7 @@ var React = require('react');
 
 export default class Movie extends React.Component {
     render(){
-        
+        // console.log(this.props.movie);
         return(
             <div>
                 <p>
