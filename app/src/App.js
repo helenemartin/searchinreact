@@ -56,7 +56,7 @@ export default class App extends Component {
   
 
   performSearch = (searchTerm) => {
-    axios.get(`${window.location.protocol}//${window.location.hostname}:8081/movies?searchTerm=${searchTerm}`)
+    axios.get(`https://itunes.apple.com/search?entity=movie&term=${searchTerm}`)
       .then((response) => {
         this.setState({
           data: response.data.results.sort(this.sortByTitle)
