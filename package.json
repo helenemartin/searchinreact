@@ -14,7 +14,7 @@
     "prestart": "npm prune --dev && npm install",
     "start": "npm-run-all -p startserver startapp",
     "startapp": "react-scripts start",
-    "startserver": "node server",
+    "startserver": "node app/server",
     "build": "react-scripts build"
   },
   "devDependencies": {
