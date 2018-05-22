@@ -17,11 +17,12 @@ export default class MovieList extends React.Component {
         
          <div className="movieList">
         { this.props.movies.map(function(movie, index){
+       
         return (
           
           <div className="movieListitem" key={movie.trackId} >
              
-                <Movie movie= {movie}/>
+                <Movie movie={movie}/>
             
           </div>
         );
