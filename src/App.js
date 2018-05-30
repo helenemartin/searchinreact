@@ -77,7 +77,7 @@ export default class App extends Component {
     return (
       <Router>
         <div>
-          <Header performSearch={this.performSearch} />
+          <Header performSearch={this.performSearch} onSortByTitle={this.onSortByTitle} onSortByReleaseYear={this.onSortByReleaseYear} movies={this.state.data} />
           <Switch>
           <Route exact path="/" render={() => 
           <MovieList movies={this.state.data} onSortByReleaseYear={this.onSortByReleaseYear} onSortyTitle={this.onSortByTitle} sortBy={this.state.sortBy}/>}

@@ -34,8 +34,16 @@ export default class FilmDetails extends React.Component {
       });
   }
     render(){
-        return <div>{this.state.movie.trackName}</div>
-    
-     
-    }
+        return (
+        <div>
+        <h1>{this.state.movie.trackName}</h1>
+        <h2>{this.state.movie.artistName}</h2>
+        <p>{this.state.movie.longDescription}</p>
+        <video src={this.state.movie.previewUrl} width="320px" height="240px" controls/>
+        
+          </div>
+          )
+      
+       
+      }
 }

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './search.css';
 
 export default class Search extends Component {
@@ -17,14 +19,15 @@ export default class Search extends Component {
     });
 
   }
-  searchClicked = (event) => {
-    this.props.performSearch(this.state.searchTerm);
-  }
+  // searchClicked = (event) => {
+  //   this.props.performSearch(this.state.searchTerm);
+  // }
+  
     render() {
         return(
             <div>
                 <input type="text"  placeholder="search" value={this.state.searchTerm} onChange={this.termChanged}/>
-                <button onClick={this.searchClicked}>Search</button>
+                <button onClick={() => { this.props.performSearch(this.state.searchTerm) }}>Search</button>
             </div>
         );
         
