@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import MovieList from './movieList.js';
-import Movie from './movie.js';
+// import Movie from './movie.js';
 import FilmDetails from './FilmDetails.js';
 //import data from './data.json';
 import axios from 'axios';
@@ -58,6 +58,8 @@ export default class App extends Component {
   
 
   performSearch = (searchTerm) => {
+    
+    console.log(Router)
   
     axios.get(`https://itunes.apple.com/search?entity=movie&term=${searchTerm}`)
       .then((response) => {

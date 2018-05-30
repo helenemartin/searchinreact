@@ -5,17 +5,16 @@ export default class Movie extends React.Component {
     render(){
         //console.log('hello', this.props.movie);
         return(
-            <div>
+
             <Link to={"/" + this.props.movie.trackId}>
+                <img src={this.props.movie.artworkUrl100} alt=""/>
                 <p>
                     {this.props.movie.trackName}
-                </p>
-                <p>
+                <br/>
                     {this.props.movie.releaseDate.substring(0, 4)}
                 </p>
-                <img src={this.props.movie.artworkUrl100} alt=""/>
             </Link>
-            </div>
+    
             
         )
         
