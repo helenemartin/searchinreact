@@ -6,6 +6,7 @@ import FilmDetails from './FilmDetails.js';
 //import data from './data.json';
 import axios from 'axios';
 import Header from './header.js';
+import { Redirect} from 'react-router';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default class App extends Component {
@@ -59,11 +60,10 @@ export default class App extends Component {
 
   performSearch = (searchTerm) => {
     
-    console.log(Router)
   
     axios.get(`https://itunes.apple.com/search?entity=movie&term=${searchTerm}`)
       .then((response) => {
-        console.log('res',response)
+        console.log('Hello', response);
         this.setState({
           data: response.data.results.sort(this.sortByTitle)
         });
@@ -73,16 +73,20 @@ export default class App extends Component {
       });
   }
   render() {
-    console.log(window.location);
     return (
       <Router>
         <div>
-          <Header performSearch={this.performSearch} onSortByTitle={this.onSortByTitle} onSortByReleaseYear={this.onSortByReleaseYear} movies={this.state.data} />
+          <Header performSearch={this.performSearch} movies={this.state.data} />
           <Switch>
-          <Route exact path="/" render={() => 
+          <Route exact path="/search" render={() => 
           <MovieList movies={this.state.data} onSortByReleaseYear={this.onSortByReleaseYear} onSortyTitle={this.onSortByTitle} sortBy={this.state.sortBy}/>}
           />
-          <Route path="/:trackId" render={(props) => { 
+          
+           
+              
+          <Route path="/film/:trackId" render={(props) => { 
+          console.log("props", props);
+             {/* {this.state.data.length ? (<Redirect to='/:trackId' />): null} */}
           // var trackName = props.match.params.trackName;
           // console.log('trackName', trackName)
           // //look here
@@ -90,7 +94,8 @@ export default class App extends Component {
           // // const movie= this.state.data.find(x=> x.trackId === props.match.params.id)
           // console.log('this one', movie)
            //return props.match.params.id
-            return <FilmDetails/>
+            
+            return <FilmDetails/>;
           }} />
           </Switch>
           
@@ -99,3 +104,4 @@ export default class App extends Component {
     );
   }
 }
+

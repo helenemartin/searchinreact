@@ -28,6 +28,9 @@
 
 .movieListitem img {
     margin: 20px;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
 }
 
 @media screen and (min-width: 480px){

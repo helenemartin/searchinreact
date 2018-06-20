@@ -1,38 +1,22 @@
 import React from 'react';
 import './header.css';
+import logo from './img/boy-watching-film.jpg';
 import Search from './search.js';
-import Filters from './Filters.js';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 const Header = (props) => {
-    const showSortButton = props.movies.length > 0;
+    const hasResults = props.movies.length > 0;
       return (
-            <header className="top">
-                <h1>
-                    Search the 
-                    <span className=" the">
-                        <span className="of"> Movie </span>
-                        <span className="the"> Data</span>
-                    </span>
-                     base
-                </h1>
-                <Switch>
-                    <Route path="/:trackId" render={() => { return <a href="/">back</a>}}/>
-                    <Route path="/" render={() => { 
-                    
-                    return (
+            <header className="head">
+                <h1>Search the Movie database</h1>
+            
                         <div>
                             <Search performSearch={props.performSearch} />
-                            {
-                                showSortButton && <Filters onSortByTitle={props.onSortByTitle} onSortByReleaseYear={props.onSortByReleaseYear} />
-                            }
-                            
-                        </div>
-                    )
-                    
+                            <img className="logo" src ={logo} alt="boy watching film" />
                         
-                    }}/>
-                </Switch>
+                        </div>
+                
+                
             </header>
         );
 };

@@ -44,6 +44,5 @@ export default class FilmDetails extends React.Component {
           </div>
           )
       
-       
       }
 }

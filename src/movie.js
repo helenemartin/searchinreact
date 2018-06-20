@@ -6,7 +6,7 @@ export default class Movie extends React.Component {
         //console.log('hello', this.props.movie);
         return(
 
-            <Link to={"/" + this.props.movie.trackId}>
+            <Link to={"/film/" + this.props.movie.trackId}>
                 <img src={this.props.movie.artworkUrl100} alt=""/>
                 <p>
                     {this.props.movie.trackName}
