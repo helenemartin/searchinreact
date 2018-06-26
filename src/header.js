@@ -8,12 +8,10 @@ const Header = (props) => {
     const hasResults = props.movies.length > 0;
       return (
             <header className="head">
-                <h1>Search the Movie database</h1>
-            
-                        <div>
+                
+                        <div className="name">
+                            <h1>Search the Movie database</h1>
                             <Search performSearch={props.performSearch} />
-                            <img className="logo" src ={logo} alt="boy watching film" />
-                        
                         </div>
                 
                 
