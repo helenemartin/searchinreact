@@ -48,6 +48,7 @@ export default class App extends Component {
   }
   
   onSortByTitle = () => {
+    console.log("hello");
     const sortedTitle = this.state.data.sort(this.sortByTitle);
     this.setState({
       data: sortedTitle,
@@ -79,7 +80,11 @@ export default class App extends Component {
           <Header performSearch={this.performSearch} movies={this.state.data} />
           <Switch >
           <Route exact path="/search" render={() => 
-          <MovieList movies={this.state.data} onSortByReleaseYear={this.onSortByReleaseYear} onSortyTitle={this.onSortByTitle} sortBy={this.state.sortBy}/>}
+          <MovieList 
+            movies={this.state.data} 
+            onSortByReleaseYear={this.onSortByReleaseYear} 
+            onSortByTitle={this.onSortByTitle} 
+            sortBy={this.state.sortBy}/>}
           />
           
            

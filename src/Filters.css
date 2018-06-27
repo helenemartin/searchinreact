@@ -1,12 +1,19 @@
-Switch .filter {
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-
+.moviefilter {
+    display: flex;
+    justify-content: flex-end ;
+    padding: 5px;
+}
+.activefilter{
+    background: teal;
+}
+button:focus { 
+    outline: none;
 }
 .title {
-   background:red; 
+   background: grey; 
 }
 
 .year {
-    background:green;
+    background: grey;
     
 }

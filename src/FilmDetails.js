@@ -35,13 +35,18 @@ export default class FilmDetails extends React.Component {
   }
     render(){
         return (
-        <div>
-        <h1>{this.state.movie.trackName}</h1>
-        <h2>{this.state.movie.artistName}</h2>
-        <p>{this.state.movie.longDescription}</p>
-        <video src={this.state.movie.previewUrl} width="320px" height="240px" controls/>
-        
+        <div className="filmdetails">
+          <div className="filmdetailsbox">
+              <div className="section">
+                <div className="filmtitle">{this.state.movie.trackName}</div>
+                <div className="director">{this.state.movie.artistName}</div>
+                <p align="justify" className="synopsis">{this.state.movie.longDescription}</p>
+              </div>
+              <div className="section">
+                <video src={this.state.movie.previewUrl} width="320px" height="240px" controls/>
+              </div>
           </div>
+        </div>
           )
       
       }

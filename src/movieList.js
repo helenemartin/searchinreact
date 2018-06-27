@@ -6,9 +6,12 @@ export default class MovieList extends React.Component {
     render(){
     const hasResults = this.props.movies.length > 0;
     return(
-      <div>
+      <div className="gradient">
         {
-            hasResults && <Filters onSortByTitle={this.props.onSortByTitle} onSortByReleaseYear={this.props.onSortByReleaseYear} />
+            hasResults && <Filters 
+            onSortByTitle={this.props.onSortByTitle} 
+            onSortByReleaseYear={this.props.onSortByReleaseYear} 
+            sortBy={this.props.sortBy}/>
         }
          <div className="movieList">
         { this.props.movies.map(function(movie, index){

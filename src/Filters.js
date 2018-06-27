@@ -3,9 +3,11 @@ import './Filters.css';
 
 const Filters = (props) => {
       return (
-        <div className="filter">
-          <button className="title" onClick={props.onSortByTitle} style={{color:props.sortBy==='title'?'blue':'black'}}>Title</button>
-          <button className="year" onClick={props.onSortByReleaseYear}>Release Year</button>
+        <div className="moviefilter">
+          <button className={props.sortBy === 'title' ? "activefilter" : "title" } 
+          onClick={props.onSortByTitle} >Title</button>
+          <button className={props.sortBy === 'releaseYear' ? "activefilter" : "year" } 
+          onClick={props.onSortByReleaseYear}>Release Year</button>
         </div>
         );
 };
