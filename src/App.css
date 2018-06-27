@@ -5,7 +5,7 @@
 }
 
 .filter {
-  background: rgb(153,151,154);
-background: linear-gradient(180deg, rgba(153,151,154,1) 0%, rgba(252,191,75,1) 100%, rgba(242,239,235,1) 100%);
+
+background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
 

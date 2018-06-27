@@ -1,9 +1,5 @@
 .movieList {
-   background: rgb(153,151,154);
-background: -webkit-linear-gradient(rgba(153,151,154,1) 0%, rgba(252,191,75,1) 100%, rgba(242,239,235,1) 100%);
-background: -moz-linear-gradient(rgba(153,151,154,1) 0%, rgba(252,191,75,1) 100%, rgba(242,239,235,1) 100%);
-background: -o-linear-gradient(rgba(153,151,154,1) 0%, rgba(252,191,75,1) 100%, rgba(242,239,235,1) 100%);
-background: linear-gradient(rgba(153,151,154,1) 0%, rgba(252,191,75,1) 100%, rgba(242,239,235,1) 100%);
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -14,12 +10,12 @@ background: linear-gradient(rgba(153,151,154,1) 0%, rgba(252,191,75,1) 100%, rgb
 }
 
 .movieListitem a {
-    background: white;
+    background: #f9f7f8;
     padding: 5px;
     display: flex;
     align-items: center;
     color: black;
-    border: solid 1px black;
+    border: solid 3px white;
     margin: 2px;
     
 }
