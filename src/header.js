@@ -1,5 +1,4 @@
 import React from 'react';
-import './header.css';
 import logo from './img/boy-watching-film.jpg';
 import Search from './search.js';
 

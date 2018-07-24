@@ -1,0 +1,50 @@
+.gradient {
+      background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.movie-list {
+    margin: 0px 28px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &-item {
+    width: 100%;
+    justify-content: space-around;
+        a {
+            background: #f9f7f8;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            color: black;
+            border: solid 3px white;
+            margin: 2px;
+            &:visited {
+                color: black;
+            }
+            &:hover{
+                color: red;
+            }
+        }
+    img {
+        margin: 20px;
+        width: 100px;
+        height: 100px;
+        justify-content: center;
+    }
+    @media screen and (min-width: $breakpoint-smartphone-min-width ){
+             
+           width: 50%;
+    
+    }
+
+    @media screen and (min-width: $breakpoint-tablet-min-width){
+    
+       width: 25%;
+    
+    
+}
+              
+  }
+}
+
+
+
