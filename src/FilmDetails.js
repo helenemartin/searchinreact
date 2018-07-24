@@ -1,5 +1,6 @@
 import React from 'react';
 import './FilmDetails.css';
+import Spinner from './Spinner.js';
 import axios from 'axios';
 
 
@@ -8,7 +9,8 @@ export default class FilmDetails extends React.Component {
         super()
         
         this.state = {
-            movie: {}
+            movie: {},
+            movieHasLoaded: false
         }
     }
     
@@ -26,7 +28,8 @@ export default class FilmDetails extends React.Component {
       .then((response) => {
         console.log('res',response)
         this.setState({
-          movie: response.data.results[0]
+          movie: response.data.results[0],
+          movieHasLoaded : true
         });
       })
       .catch(function(error) {
@@ -36,6 +39,7 @@ export default class FilmDetails extends React.Component {
     render(){
         return (
         <div className="filmdetails">
+          {this.state.movieHasLoaded ? 
           <div className="filmdetailsbox">
               <div className="section">
                 <div className="filmtitle">{this.state.movie.trackName}</div>
@@ -46,6 +50,9 @@ export default class FilmDetails extends React.Component {
                 <video src={this.state.movie.previewUrl} width="320px" height="240px" controls/>
               </div>
           </div>
+          :
+            <Spinner />
+          }
         </div>
           )
       
