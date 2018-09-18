@@ -8,6 +8,7 @@ import axios from 'axios';
 import Header from './header.js';
 import { Redirect} from 'react-router';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { findDOMNode} from 'react-dom';
 
 export default class App extends Component {
 
@@ -18,8 +19,11 @@ export default class App extends Component {
       data: [],
       sortBy: 'title'
     };
+    //target Header in setTimeOut within the render function
+    this.Header = React.createRef();
     // this.termChanged= this.termChanged.bind(this) 
   }
+
   sortByTitle(a,b) {
     if (a.trackName === b.trackName) {
       return 0;
@@ -67,7 +71,21 @@ export default class App extends Component {
         console.log('Hello', response);
         this.setState({
           data: response.data.results.sort(this.sortByTitle)
+        },() => {
+          console.log("Loaded",);
+          //finding the dom node to run the window to scroll event
+            setTimeout( () => {
+                var node = findDOMNode(this.Header.current);
+                var height = node.getBoundingClientRect().height;
+             window.scrollTo({top:height, behavior:"smooth"});
+    
+            console.log("Scrolled");
+         },2);
         });
+      // .doScroll(response) => {
+      //   console.log('Hello', response);
+      //   //this
+      // }
       })
       .catch(function(error) {
         console.log(error);
@@ -77,7 +95,9 @@ export default class App extends Component {
     return (
       <Router>
         <div>
-          <Header performSearch={this.performSearch} movies={this.state.data} />
+          <Header performSearch={this.performSearch} movies={this.state.data}
+            ref = {this.Header}
+          />
           <Switch >
           <Route exact path="/search" render={() => 
           <MovieList 

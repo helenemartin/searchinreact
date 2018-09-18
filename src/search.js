@@ -28,8 +28,10 @@ class Search extends Component {
     render() {
         return(
             <div>
-                <input type="text"  placeholder="search" value={this.state.searchTerm} onChange={this.termChanged}/>
-                <button onClick={() => { this.searchClicked() }}>Search</button>
+                <input type="text"  placeholder="search" 
+                value={this.state.searchTerm} onChange={this.termChanged}/>
+                <button onClick={() => { this.searchClicked()}}
+                >Search</button>
             </div>
         );
         
