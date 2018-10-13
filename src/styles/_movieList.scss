@@ -15,8 +15,9 @@
             display: flex;
             align-items: center;
             color: black;
-            border: solid 3px white;
+            border: solid 1px white;
             margin: 2px;
+            border-radius: 5px;
             &:visited {
                 color: black;
             }
@@ -26,10 +27,11 @@
         }
     img {
         margin: 20px;
-        width: 100px;
-        height: 100px;
-        justify-content: center;
+        min-height: 100%;
+        object-fit: cover;
     }
+
+
     @media screen and (min-width: $breakpoint-smartphone-min-width ){
              
            width: 50%;

@@ -3,7 +3,7 @@
     height: 90vh;
     position: relative;
     text-align: center;
-    background-image: url('./img/boy-watching-film.jpg');
+    background-image: linear-gradient(to right top, #690015, #DC143C, rgba(40, 180, 131, 0.2)), url('./img/thehorror.jpg');
     background-size: cover;
 }
 .name {
@@ -13,7 +13,7 @@
     transform: translateX(-50%);
 }
 .name h1{
-    color: blue;
+    color: black;
     
 }
 

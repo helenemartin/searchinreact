@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
-import './search.css';
+import './styles/_search.scss';
 
 class Search extends Component {
       constructor(props) {
@@ -27,11 +27,13 @@ class Search extends Component {
   
     render() {
         return(
-            <div>
-                <input type="text"  placeholder="search" 
-                value={this.state.searchTerm} onChange={this.termChanged}/>
-                <button onClick={() => { this.searchClicked()}}
-                >Search</button>
+            <div className="search-container">
+                <div className="search">
+                    <input type="text" className="search-bar" placeholder="search" 
+                    value={this.state.searchTerm} onChange={this.termChanged}/>
+                
+                    <img className="search-icon" onClick={() => { this.searchClicked() }} src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"/>
+                </div>
             </div>
         );
         
