@@ -72,7 +72,8 @@ p {
 .search-container {
   width: 490px;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-radius: 25px; }
 
 input.search-bar {
   margin: 0 auto;
@@ -81,7 +82,8 @@ input.search-bar {
   padding: 0 20px;
   font-size: 1rem;
   border: 1px solid #D0CFCE;
-  outline: none; }
+  outline: none;
+  border-radius: 25px; }
   input.search-bar:focus {
     border: 1px solid #008ABF;
     transition: 0.35s ease;
@@ -107,7 +109,8 @@ input.search-bar {
 .search-container {
   width: 490px;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-radius: 25px; }
 
 input.search-bar {
   margin: 0 auto;
@@ -116,7 +119,8 @@ input.search-bar {
   padding: 0 20px;
   font-size: 1rem;
   border: 1px solid #D0CFCE;
-  outline: none; }
+  outline: none;
+  border-radius: 25px; }
   input.search-bar:focus {
     border: 1px solid #008ABF;
     transition: 0.35s ease;

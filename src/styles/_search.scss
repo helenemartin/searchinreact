@@ -2,6 +2,7 @@
   width: 490px;
   display: block;
   margin: 0 auto;
+  border-radius: 25px;
 }
 
 input.search-bar{
@@ -12,6 +13,7 @@ input.search-bar{
   font-size: 1rem;
   border: 1px solid #D0CFCE;
   outline: none;
+  border-radius: 25px;
   &:focus{
     border: 1px solid #008ABF;
     transition: 0.35s ease;
