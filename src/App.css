@@ -1,14 +1,13 @@
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
-  padding: 30px;
-  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); }
+  padding: 30px; }
 
 p {
   font-family: "Gill Sans", sans-serif; }
 
 .gradient {
-  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); }
+  background-color: #f1f0ee; }
 
 .movie-list {
   margin: 0px 28px;
@@ -52,28 +51,21 @@ p {
 
 .name {
   position: absolute;
-  top: 10%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%); }
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
 .name h1 {
-  color: black; }
+  color: #fff;
+  text-transform: uppercase;
+  opacity: 0.8;
+  padding-left: 35px; }
 
-/*@media screen and (min-width: 480px){*/
-/*    .head {*/
-/*       width: 50%;*/
-/*    }*/
-/*}*/
-/*@media screen and (min-width: 900px){*/
-/*    .head {*/
-/*       width: 25%;*/
-/*    }*/
-/*}*/
 .search-container {
-  width: 490px;
+  width: 100%;
   display: block;
-  margin: 0 auto;
-  border-radius: 25px; }
+  margin: 0 auto; }
 
 input.search-bar {
   margin: 0 auto;
@@ -85,9 +77,9 @@ input.search-bar {
   outline: none;
   border-radius: 25px; }
   input.search-bar:focus {
-    border: 1px solid #008ABF;
     transition: 0.35s ease;
-    color: #008ABF; }
+    color: #008ABF;
+    box-shadow: 0 50px 20px rgba(0, 0, 0, 0.1); }
     input.search-bar:focus::-webkit-input-placeholder {
       transition: opacity 0.45s ease;
       opacity: 0; }
@@ -106,39 +98,61 @@ input.search-bar {
   top: -62px;
   right: -45px; }
 
-.search-container {
-  width: 490px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 25px; }
-
-input.search-bar {
-  margin: 0 auto;
+.filmdetails {
   width: 100%;
-  height: 45px;
-  padding: 0 20px;
-  font-size: 1rem;
-  border: 1px solid #D0CFCE;
-  outline: none;
-  border-radius: 25px; }
-  input.search-bar:focus {
-    border: 1px solid #008ABF;
-    transition: 0.35s ease;
-    color: #008ABF; }
-    input.search-bar:focus::-webkit-input-placeholder {
-      transition: opacity 0.45s ease;
-      opacity: 0; }
-    input.search-bar:focus::-moz-placeholder {
-      transition: opacity 0.45s ease;
-      opacity: 0; }
-    input.search-bar:focus:-ms-placeholder {
-      transition: opacity 0.45s ease;
-      opacity: 0; }
+  padding-top: 5px; }
 
-.search-icon {
-  position: relative;
-  float: right;
-  width: 75px;
-  height: 75px;
-  top: -62px;
-  right: -45px; }
+.filmdetailsbox {
+  display: flex;
+  flex-direction: row;
+  background: #f1f0ee;
+  border-radius: 2px; }
+
+.filmtitle {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 20px; }
+
+.director {
+  padding-left: 20px;
+  font-size: 1.2em;
+  font-style: italic; }
+
+.synopsis {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.section {
+  padding: 10px; }
+
+@media screen and (max-width: 50em) {
+  .filmdetailsbox {
+    flex-direction: column;
+    text-align: center; }
+  .filmdirector {
+    padding-right: 5px; }
+  .filmtitle {
+    padding-right: 15px; }
+  .section {
+    padding: 20px; } }
+
+@media screen and (min-width: 480px) {
+  video: 25%; }
+
+.moviefilter {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px; }
+
+.activefilter {
+  background: teal;
+  color: white; }
+
+button:focus {
+  outline: none; }
+
+.title {
+  background: grey; }
+
+.year {
+  background: grey; }

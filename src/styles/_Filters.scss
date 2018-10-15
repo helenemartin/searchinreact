@@ -1,0 +1,21 @@
+.moviefilter {
+    display: flex;
+    justify-content: flex-end ;
+    padding: 5px;
+}
+.activefilter{
+    background: teal;
+    color: white;
+}
+
+
+button:focus { 
+    outline: none;
+}
+.title {
+   background: grey;
+}
+
+.year {
+    background: grey;
+}

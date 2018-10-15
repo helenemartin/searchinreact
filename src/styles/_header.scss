@@ -8,26 +8,17 @@
 }
 .name {
     position: absolute;
-    top: 10%;
-    left:50%;
-    transform: translateX(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 .name h1{
-    color: black;
-    
+    color:#fff;
+    text-transform: uppercase;
+    opacity: 0.8;
+    padding-left: 35px;
 }
 
-/*@media screen and (min-width: 480px){*/
-/*    .head {*/
-/*       width: 50%;*/
-/*    }*/
-    
-/*}*/
 
-/*@media screen and (min-width: 900px){*/
-/*    .head {*/
-/*       width: 25%;*/
-/*    }*/
-    
-/*}*/
 

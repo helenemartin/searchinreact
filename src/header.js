@@ -10,14 +10,12 @@ export default class Header extends React.Component {
         const hasResults = this.props.movies.length > 0;
         return(
             <header className="head">
-                    
                 <div className="name">
                     <h1>Search the Movie database</h1>
                     <Search performSearch={this.props.performSearch}
                     doScroll={this.scroll} />
                 </div>
-    
-                </header>
+            </header>
            
         )}
         

@@ -29,9 +29,8 @@ class Search extends Component {
         return(
             <div className="search-container">
                 <div className="search">
-                    <input type="text" className="search-bar" placeholder="search" 
+                    <input type="text" className="search-bar" placeholder="Search movies" 
                     value={this.state.searchTerm} onChange={this.termChanged}/>
-                
                     <img className="search-icon" onClick={() => { this.searchClicked() }} src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"/>
                 </div>
             </div>
